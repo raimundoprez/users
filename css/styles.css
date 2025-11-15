@@ -1,7 +1,13 @@
+:root {
+  --borderRadius: 3px;
+  --borderColor: rgb(195, 195, 195);
+  --cardSpacing: 10px;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  margin: 0;
+  margin: 0px;
   padding: 20px;
 }
 
@@ -10,4 +16,52 @@ h1 {
   color: #333;
 }
 
+h2 {
+  text-align: center;
+}
 
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+li {
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius);
+  padding: var(--cardSpacing);
+  width: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--cardSpacing);
+}
+
+li > div:first-of-type {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+
+li > div:first-of-type > div {
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius);
+  padding: var(--cardSpacing);
+  flex-grow: 1;
+}
+
+p {
+  margin: 0px;
+}
+
+p > span:first-child {
+  font-weight: bold;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
